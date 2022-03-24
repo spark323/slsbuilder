@@ -267,7 +267,7 @@ async function printServerlessFunction(stage, templateFile, apiSpecList) {
                     let funcObject = {};
                     if (item.type == "websocket") {
                         funcObject = {
-                            name: item.functionName ? item.functionNAme : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
+                            name: item.functionName ? item.functionName : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
                             handler: `src/lambda/${item.name}.handler`,
                             //alarms: ["scan500Error"],
                             alarms: [{ name: "functionErrors", enabled: (stage == "prod") ? true : false }],
@@ -282,7 +282,7 @@ async function printServerlessFunction(stage, templateFile, apiSpecList) {
                     }
                     else if (item.type == "s3") {
                         funcObject = {
-                            name: item.functionName ? item.functionNAme : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
+                            name: item.functionName ? item.functionName : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
                             handler: `src/lambda/${item.name}.handler`,
                             // alarms: ["scan500Error"],
                             alarms: ["functionErrors"],
@@ -300,7 +300,7 @@ async function printServerlessFunction(stage, templateFile, apiSpecList) {
                     else if (item.type == "sqs") {
 
                         funcObject = {
-                            name: item.functionName ? item.functionNAme : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
+                            name: item.functionName ? item.functionName : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
                             handler: `src/lambda/${item.name}.handler`,
                             // alarms: ["scan500Error"],
                             alarms: ["functionErrors"],
@@ -322,7 +322,7 @@ async function printServerlessFunction(stage, templateFile, apiSpecList) {
                     }
                     else if (item.type == "pure") {
                         funcObject = {
-                            name: item.functionName ? item.functionNAme : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
+                            name: item.functionName ? item.functionName : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
                             handler: `src/lambda/${item.name}.handler`,
                             //alarms: ["scan500Error"],
 
@@ -332,7 +332,7 @@ async function printServerlessFunction(stage, templateFile, apiSpecList) {
 
                     else {
                         funcObject = {
-                            name: item.functionName ? item.functionNAme : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
+                            name: item.functionName ? item.functionName : (`\${self:app}_\${opt:stage, "dev"}\${opt:ver, "1"}_${nameArr.join("_")}`),
                             handler: `src/lambda/${item.name}.handler`,
                             //alarms: ["scan500Error"],
                             alarms: [{ name: "functionErrors", enabled: (stage == "prod") ? true : false }],
